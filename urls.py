@@ -1,7 +1,9 @@
-from django.contrib import admin
-from django.urls import path, include
-
+from django.urls import path
+from . import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('net_automation.urls'))
+    path('', views.home, name="home"),
+    path('devices', views.devices, name="devices"),
+    path('configure', views.configure, name="configure"),
+    path('verify_config', views.verify_config, name="verify_config"),
+    path('log', views.log, name="log")
 ]

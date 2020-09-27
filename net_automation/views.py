@@ -3,10 +3,9 @@ import time
 
 from datetime import datetime
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect
 
-from .models import Device, Log
+from net_automation.models import Device, Log
 
 # Create your views here.
 def home(request):
